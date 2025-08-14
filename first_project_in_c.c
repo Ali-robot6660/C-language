@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+    // объявить переменные
+int h,m,min,sec;
+    // прочитать входные данные
+scanf("%d%d",&h,&m);
+    // вычислить
+min = (h * 60) + m;
+sec = min * 60;
+    // напечатать результат
+printf("%d\n%d",min,sec);
+    return 0;
+}
