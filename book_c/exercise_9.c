@@ -113,9 +113,9 @@ int getArea(int x, int y){
     return 0;
  }*/
 
-
+/*
 #include <stdio.h>
-#include <math.h>
+#include <math.h>                                       //연습문제 5 (269p)
 int res;
 int iNteger(int x){
     return x;
@@ -145,4 +145,54 @@ int main(void){
         "--------------------------------------------------------\n"
         "    %d          %d          %d          %d          %d  \n",
         iNteger(x), sQuare(x), cUbe(x), qUartic(x), qUintic(x));
+}
+        */
+
+
+/*#include <stdio.h>
+#include <ctype.h> //библиотека для функции toupper() заглавнение буква
+
+int Alpha(char A){                                                                  //연습문제 7 (270p)
+    int i;
+    char alpha[26]={'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+    for(i=0; i<26; i++){
+        if(A == alpha[i]){
+            return i+1;
+        }
+    }
+}
+
+int main(void){
+    char a;
+    printf("알파벳을 입력하세요 : ");
+    scanf("%c", &a);
+    a = toupper(a);
+    printf("입력한 %c는 알파벳 순서로 %d 번째 문자입니다.", a, Alpha(a));
+
+    return 0;
+}*/
+
+
+
+
+
+
+#include <stdio.h>
+
+int Factorial(int n){                                             //연습문제 8 (270p)
+    int i, res=0;
+    for(i=1; i<=n; i++){
+        res += i;
+    }
+    return res;
+}
+
+
+int main(void){
+    int n;
+    printf("input your number : ");
+    scanf("%d", &n);
+    printf("1부터 %d까지의 합 = %d", n, Factorial(n));
+
+    return 0;
 }
