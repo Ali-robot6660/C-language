@@ -94,3 +94,58 @@ int main(){
     return 0;
 }
     */
+
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){                                                         //연습문제 4 (325p)
+    int i, j;
+    int arrayA[4][3] = {
+        {23, 75, 85},
+        {12, 77, 51},
+        {25, 66, 30},
+        {19, 90, 88}
+    };
+    int arrayB[4][3] = {
+        {11, 15, 47},
+        {74, 85, 69},
+        {57, 86, 28},
+        {90, 22, 33}
+    };
+    int arrayC[4][3] = {};
+    int arrayD[4][3] = {};
+
+    for(i=0; i < 4; i++){
+        for(j=0; j < 3; j++){
+             arrayC[i][j] =  arrayA[i][j] +  arrayB[i][j];
+             arrayD[i][j] =  arrayA[i][j] -  arrayB[i][j];
+             printf("    arrayA : | %02d |\n", arrayA[i][j]);
+             printf("    arrayB : | %02d |\n", arrayB[i][j]);
+             printf("SUM arrayC : | %02d |\n", arrayC[i][j]);
+             printf("DIF arrayD : | %02d |\n", abs(arrayD[i][j]));
+             printf("\n");
+        }
+    }
+    return 0;
+}
+    */
+
+
+#include <stdio.h>
+int main(){                                                 //연습문제 5 (325p)
+    int i, j;
+
+    int array[2][3] = {1, 2, 3, 4, 5, 6};
+    int *array2[2][3];
+    for(i=0; i < 2; i++){
+        for(j=0; j < 3; j++){
+            //array2[i] = *(array+i);
+            printf("value: %d \n", array[i][j]);
+            printf("address: %p \n", array2[i][j]);
+
+        }
+    }
+
+}
